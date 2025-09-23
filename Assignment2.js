@@ -25,7 +25,16 @@ let age1 = 17;
 
 // Assignment:
 // Welcome, Diana Karanja!
-console.log("Welcome,", rawName.trim().charAt(0).toUpperCase() + rawName.trim().slice(1));
+let name1 = rawName.trim().split(" ");
+console.log(name1)
+let firstName = name1[0]
+let lastName = name1[1]
+console.log(firstName)
+
+console.log(firstName.charAt(0).toUpperCase() + name1.slice(1))
+console.log(lastName.charAt(0).toUpperCase() + lastName.slice(1))
+let formattedName = `${firstName.charAt(0).toUpperCase() + name1[0].slice(1)} ${lastName.charAt(0).toUpperCase() + name1[1].slice(1)}`
+console.log("Welcome,", formattedName + "!")
 
 // Email: dianakaranja@email.com
 console.log("Email:", rawEmail.trim().toLowerCase())
