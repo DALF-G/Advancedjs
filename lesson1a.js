@@ -29,5 +29,5 @@ console.log(typeof county);
 
 // null -  represents intentional absence of any object value, "no value" or "no object"
 let username = null;
-console.log("what is the username the person tregistering with? ", username);
+console.log("what is the username the person registering with? ", username);
 console.log(typeof username); 

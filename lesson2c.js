@@ -20,8 +20,8 @@ let smallCaseGreetings = greetings.toLowerCase()
 console.log(smallCaseGreetings)
 
 // the slice() function enables us to extract characters from a given index to another index
-
 console.log(name.trim().slice(2,4)) 
+
 // includes function : -it is used to check  wether a given character exists in a given string.it returns a boolean value
 console.log(name.trim().includes("f"))
 

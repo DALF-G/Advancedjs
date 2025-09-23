@@ -12,7 +12,7 @@ console.log("The updated cities array is: ", updatedCities)
 
 // We can use the filter function to create a program that is able to find all the even numbers in array
 
-let numbers = [0,1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 let evenNumbers = numbers.filter(n => n % 2 === 0)
 
