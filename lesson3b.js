@@ -5,16 +5,18 @@
 // else grade E. The three subjects are English, kiswahili and science.
 
 let attendance = 80;
-let English = 80;
-let Kiswahili = 90;
-let Science = 95;
+let English = 180;
+let Kiswahili = 190;
+let Science = 195;
 
 if (attendance < 75) {
     console.log("Failed Due to low attendance")
 } else {
     let average = (English + Kiswahili + Science) / 3;
-    if (average >= 90) {
+    if (average >= 90 && average <= 100) {
         console.log("Grade A")
+    }else if (average > 100) {
+        console.log("Invalid entry. Please try again")
     } else if (average >= 80 && average < 90) {
         console.log("Grade B")
     } else if (average >= 70 && average < 80) {
