@@ -5,9 +5,9 @@
 // else grade E. The three subjects are English, kiswahili and science.
 
 let attendance = 80;
-let English = 180;
-let Kiswahili = 190;
-let Science = 195;
+let English = 80;
+let Kiswahili = 90;
+let Science = 95;
 
 if (attendance < 75) {
     console.log("Failed Due to low attendance")
@@ -26,4 +26,13 @@ if (attendance < 75) {
     } else {
         console.log("Grade E")
     }
+}
+
+//  write a js program that checks a given number is even or odd.
+
+let number = 2;
+if (number % 2 === 0) {
+    console.log("It's an Even number");
+} else {
+    console.log("It's an Odd number");
 }
