@@ -38,6 +38,9 @@ if (!username || !email || !password || !phone) {
     return "All fields are required!";
   }
  // If all checks pass
-  return `User ${username} registered successfully! 🎉`;
+  return `User ${username} registered successfully!`;
 }  
-console.log(register("Andrie", "dalfandrie@gmail.com", "0Seven!15", "0715082817")); 
+console.log(register("Andrie", "dalfandrie@gmail.com", "0Seven!15", "0715082817")); // typed all fields
+console.log(register("Andrie", "dalfandrie.com","0Seven!15", "0715082817")) // ommited @gmail
+console.log(register("Andrie", "dalfandrie@gmail","0Seven!15", "0715082817")) // ommited .com
+console.log(register("Andrie", "dalfandrie@gmail.com","0Seven15", "0715082817")) // ommited special character in pass
