@@ -39,3 +39,19 @@ const simpleInterest = (principal, rate, time) => {
 simpleInterest(25000, 8.5, 7)
 simpleInterest(30000, 7.5, 5)
 simpleInterest(60000, 5.8, 6)
+
+// Anonymous function in javascript
+// This is a function that does not have a defined name, It automatically picks the name of the variable where it is stored
+
+const greet = function(){
+    console.log("Hello there.How are you?")
+}
+greet();
+
+// Below is another example of an anonymous function
+
+(
+    function(){
+        console.log("This is another anonymous function")
+    }
+)()
