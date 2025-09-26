@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling</title>
+</head>
+<body>
+   <h1 id="mainTitle">Hover or click on me!</h1> 
+   <button onclick="handleClick()">Click button</button>
+
+   <p id="feedback"></p>
+
+   <script>
+
+    let mainTitle = document.getElementById("mainTitle")
+    let feedback = document.getElementById("feedback")
+
+    const handleClick = () =>{
+        alert("The button has been clicked...")
+    }
+    // on mouse over
+    mainTitle.onmouseover = () =>{
+        mainTitle.style.color = "blue";
+        mainTitle.innerText = "Mouse is over the h1 title"
+        feedback.innerText = "Mouse is on top of the tag element"
+    }
+
+    mainTitle.onmouseout = ()=>{
+        mainTitle.style.color = ("orange")
+        feedback.innerText = ("The mouse has moved away...")
+    }
+   </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">Hello, World</h1>
+    <button onclick="changeTitle()">Change Heading Text</button>
+
+    <button onclick="changeContent()">change content</button>
+    <br> <br> <br>
+
+    <input type="text" id="myInput" value="" placeholder="Enter a text"><br>
+    <button onclick="getInputEnter()">Get What User Entered</button>
+
+    <script>
+        const changeTitle = ()=>{
+            let element = document.getElementById("title");
+            element.innerText ="You clicked the Button"
+        }
+        const getElementContent = ()=>{
+            //  get the content of the element h1
+
+            let h1 = document.getElementById("title")
+            let content = h1.innerText
+            console.log("Content:"+ content)
+        }
+
+        const changeContent = ()=>{
+            document.getElementById("title").innerHTML = "<span style = 'color:red'>Welcome Back!</span>"
+            getElementContent();
+        }
+
+        const getInputEnter = () =>{
+            //  extract the values from the input
+            let input = document.getElementById("myInput")
+            let value = input.value
+
+            console.log("This is the text a person has typed:" + value)
+
+        }
+    </script>
+</body>
+</html>

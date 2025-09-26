@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Dog Viewer</title>
+    <style>
+        body{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            text-align: center;
+            margin-top: 50px;
+            color: rgb(14, 54, 174);
+        }
+        img{
+            max-width: 300px;
+            height: 300px;
+            margin-top: 20px;
+            border-radius: 40px;
+        }
+        button{
+            padding: 10px;
+            background-color: rgb(237, 7, 222);
+            color: white;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Random Dog Image</h1>
+    <button ondblclick="getRandomDog()">Show a dog</button>
+    <img src="" id="dogimage" alt="Random dog will appear here">
+
+    <script>
+        async function getRandomDog() {
+            try{
+            //  fetch data from API Endpoint
+            const response = await fetch("https://dog.ceo/api/breeds/image/random")
+            //  convert the response to json
+            const data = await response.json()
+
+            // console.log(data)
+
+            // Get the image element by use of the id and set the new image given back as response from the API
+            const img = document.getElementById("dogimage");
+
+            //  on the src, attach the url which is basically contained on the key "message" of the API
+            img.src = data.message;
+           
+            }
+            catch(error){
+                console.error("An Error occured while fetching the dog image" + error)
+            } 
+        }
+        //  invoke the function
+        getRandomDog()
+    </script>
+</body>
+</html>
